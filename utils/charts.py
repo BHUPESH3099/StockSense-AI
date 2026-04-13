@@ -214,6 +214,7 @@ def rsi_chart(df: pd.DataFrame, ticker: str) -> go.Figure:
 
     fig.update_yaxes(range=[0, 100])
 
+    return fig
 
 def macd_chart(df: pd.DataFrame) -> go.Figure:
     """MACD chart with signal line and histogram."""
