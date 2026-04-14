@@ -213,16 +213,6 @@ with st.sidebar:
         label_visibility="collapsed",
     )
 
-    # Quick picks
-    st.markdown("**Quick Picks:**")
-    quick_cols = st.columns(4)
-    quick_tickers = ["AAPL", "TSLA", "NVDA", "MSFT", "AMZN", "GOOGL", "META", "NFLX"]
-    for i, qt in enumerate(quick_tickers):
-        if quick_cols[i % 4].button(qt, key=f"qt_{qt}"):
-            ticker_input = qt
-            st.session_state["current_ticker"] = qt
-
-    st.divider()
 
     # Date range
     st.markdown('<div class="section-header">📅 Date Range</div>', unsafe_allow_html=True)
@@ -553,7 +543,7 @@ with tab_portfolio:
     with p_col1:
         portfolio_tickers_raw = st.text_input(
             "Enter tickers (comma separated)",
-            value="AAPL, MSFT, GOOGL, AMZN, NVDA",
+            value="MRPL,TCS",
             help="E.g.: AAPL, TSLA, INFY.NS, BTC-USD",
         )
         portfolio_tickers = [t.strip().upper() for t in portfolio_tickers_raw.split(",") if t.strip()]
