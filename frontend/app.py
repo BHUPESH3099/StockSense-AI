@@ -208,7 +208,7 @@ with st.sidebar:
     # Ticker input with autocomplete suggestion
     ticker_input = st.text_input(
         "Enter Ticker Symbol",
-        value="AAPL",
+        value="",
         placeholder="Please enter a ticker symbol (e.g. TCS, INFY)",
         label_visibility="collapsed",
     )
