@@ -209,7 +209,7 @@ with st.sidebar:
     ticker_input = st.text_input(
         "Enter Ticker Symbol",
         value="AAPL",
-        placeholder="AAPL, TSLA, INFY.NS...",
+        placeholder="Please enter a ticker symbol (e.g. TCS, INFY)",
         label_visibility="collapsed",
     )
 
